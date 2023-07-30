@@ -16,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/login" element={isloggedIn?<Navigate to='/profile'/>:<LoginPage setLoginStatus={setLoginStatus}/>}></Route>
         <Route path="/profile" element={isloggedIn?<ProfilePage/>:<Navigate to='/login'/>}></Route>
+        <Route path="*" element={<Navigate to='/login'/>}></Route>
+
       </Routes>
     </BrowserRouter>
   );
